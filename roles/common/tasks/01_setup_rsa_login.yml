@@ -1,0 +1,83 @@
+- hosts: webservers,dbservers
+  become: yes
+  vars:
+  - MG_username: trashMG
+  - MG_homedir:  /home/{{username}}
+  - MG_password: $1$25$/EqOfcxYyGor02JYZWZwG0
+  - tech_username: tech-user
+  - tech_homedir: /home/{{tech_username}}
+  - tech_password: $1$25$/EqOfcxYyGor02JYZWZwG0
+  - OP_username: operator
+  - OP_homedir: /home/{{OP_username}}
+  - OP_password: $1$25$/EqOfcxYyGor02JYZWZwG0
+  tasks:
+  - name: Put profile on remote
+    copy: 
+      src: common_files/addProfile.txt
+      dest: /home/ryouta/addProfile.txt
+      owner: ryouta
+      group: wheel
+
+  - name: create script log directory
+    file:
+      path: /var/log/script
+      state: directory
+      mode: 755
+
+  - name: Set script command.
+    shell: cat ../files/addProfile.txt > /etc/profile
+
+  - name: add a new user
+    user: name={{ item.username }} state={{ item.state }} group={{ item.group } password={{ password }}
+    with_items: 
+      - { "name":"{{MG_username}}", "state":"present", "group":"wheel", "password":"{{MG_password}}" }
+      - { "name":"{{tech_username}}", "state":"present", "group":"wheel", "password":"{{tech_password}}" }
+      - { "name":"{{OP_username}}", "state":"present", "group":"operator", "password":"{{OP_password}}" }
+
+
+  - name: mkdir .ssh
+    file: dest={{ item.dest }} state=directory owner={{ item.owner }}
+    with_items: 
+      - { "dest":"{{MG_homedir}}", "owner":"{{MG_username}}" }
+      - { "dest":"{{tech_homedir}}", "owner":"{{tech_username}}" }
+      - { "dest":"{{OP_homedir}}", "owner":"{{OP_username}}" }
+
+  - name: add authorized keys
+    file: dest={{ item.dest }}  state=touch owner={{ item.owner}}
+    with_items:
+      - { "dest":"{{MG_homedir}}/.ssh/authorized_keys", "owner":"{MG_username}" }
+
+  - name: copy a public key file to remote
+    copy: src={{ item.src }} dest={{ item.dest }} mode=600
+    with_items:
+      - { "src":"../files/trashMG_pub", "dest":"{{MG_homedir}}/.ssh/authorized_keys" }
+      - { "src":"../files/tech-user_pub", "dest":"{{tech_homedir}}/.ssh/authorized_keys" }
+      - { "src":"../files/operator_pub", "dest":"{{OP_homedir}}/.ssh/authorized_keys" }
+
+  - name: get zabbix agent rpm file.
+    get_url:
+      url: http://repo.zabbix.com/zabbix/3.2/rhel/7/x86_64/zabbix-agent-3.2.6-1.el7.x86_64.rpm
+      dest: "/tmp/zabbix-agent-3.2.6-1.el7.x86_64.rpm"
+
+  - name: install zabbix agent.
+    yum: name=/tmp/zabbix-agent-3.2.6-1.el7.x86_64.rpm
+
+  - name: put zabbix-agent.conf on remote
+    copy: 
+      src: ../files/zabbix_agentd.conf 
+      dest: /etc/zabbix/zabbix_agentd.conf
+      owner: zabbix
+      group: zabbix
+
+
+  - name: zabbix user joins sub-group of wheel
+    user: name=zabbix group=zabbix groups=wheel
+
+  - name: Add SELinux permit rule.
+    shell: setenforce 0
+
+  - name: Start zabbix-agent service
+    systemd:
+      name: zabbix-agent
+      enabled: yes
+      state: started
