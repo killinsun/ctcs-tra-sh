@@ -1,0 +1,761 @@
+    1  exit
+    2  ls
+    3  hostname
+    4  date
+    5  sudo yum install vim
+    6  vim memo.txt
+    7  ping take-tra-sh3
+    8  ping take-tra-sh2
+    9  ping take-tra-sh3
+   10  sudo yum -y install epel-release
+   11  sudo yum install ansible sshpass
+   12  ansible --version
+   13  sudo cat /etc/ansible/ansible.cfg 
+   14  sudo vim /etc/ansible/ansible.cfg 
+   15  sudo ls -l /etc/ansible
+   16  sudo vim /etc/ansible/ansible.cfg 
+   17  sudo vim /etc/ansible/hosts
+   18  ping take-tra-sh2
+   19  sudo vim /etc/ansible/hosts
+   20  ls
+   21  mkdir playbooks
+   22  cd playbooks/
+   23  ls
+   24  vim 01_testbook.yml
+   25  ssh-keygen
+   26  ls
+   27  cd .ssh
+   28  cd ~/.ssh
+   29  ls
+   30  cat id_rsa.pub >> .ssh/authorized_keys
+   31  touch .ssh/authorized_keys
+   32  mkdir .ssh
+   33  cat id_rsa.pub >> .ssh/authorized_keys
+   34  chmod 600 .ssh/authorized_keys 
+   35  cd
+   36  ls
+   37  cd .ssh
+   38  ls
+   39  cd pla
+   40  ls
+   41  cd
+   42  cat .ssh
+   43  ls .ssh
+   44  ls .ssh/
+   45  cd .ssh
+   46  ls
+   47  ls -a
+   48  rm -rf .ssh
+   49  touch authorized_keys
+   50  cat id_rsa.pub >> authorized_keys
+   51  ll
+   52  chmod 600 authorized_keys 
+   53  ls
+   54  cd
+   55  ls
+   56  ansible
+   57  ansible| grep pass
+   58  ansible take-tra-sh2 -m ping -i hosts -u ryouta -k $Killinsunoldmind0
+   59  ansible take-tra-sh2 -m ping -i hosts -u ryouta -k
+   60  cat /etc/ansible/hosts 
+   61  ansible take-tra-sh2 -m ping -i /etc/ansible/hosts -u ryouta -k
+   62  ssh ryouta@take-tra-sh2
+   63  ssh ryouta@take-tra-sh3
+   64  ansible take-tra-sh2 -m ping -i /etc/ansible/hosts -u ryouta -k
+   65  ansible-playbook -i /etc/ansible/hosts playbooks/01_testbook.yml -u ryouta -k
+   66  cd playbooks/
+   67  vim 01_testbook.yml 01_testbook.yml 
+   68  ansible-playbook -i /etc/ansible/hosts playbooks/01_testbook.yml -u ryouta -k
+   69  ansible-playbook -i /etc/ansible/hosts 01_testbook.yml -u ryouta -k
+   70  vim 01_testbook.
+   71  vim 01_testbook.yml 
+   72  cp ~/.ssh/id_rsa.pub ./public.j2
+   73  ls
+   74  vim 02_copy_a_file_to_remote.yml
+   75  cat 01_testbook.
+   76  cat 01_testbook.yml 
+   77  vim 02_copy_a_file_to_remote.yml
+   78  vim 01_testbook.yml 
+   79  sudo vim /etc/ansible/hosts
+   80  ansible-playbook -i /etc/ansible/hosts 01_testbook.yml -u ryouta -k
+   81  vim 01_testbook.yml 
+   82  ansible-playbook -i /etc/ansible/hosts 01_testbook.yml -u ryouta -k
+   83  vim 01_testbook.yml 
+   84  ansible-playbook -i /etc/ansible/hosts 01_testbook.yml -u ryouta -k
+   85  ansible-playbook -i /etc/ansible/hosts 01_testbook.yml -u ryouta -k -vv
+   86  ansible-playbook -i /etc/ansible/hosts 01_testbook.yml -u ryouta -k -vvvv
+   87  ssh localhost
+   88  ssh ryouta@localhost
+   89  ssh
+   90  ssh -p
+   91  man ssh
+   92  man ssh | pass
+   93  man ssh | grep pass
+   94  man ssh 
+   95  ssh -f ryouta@localhost
+   96  ssh -f password ryouta@localhost
+   97  ssh -f ryouta@localhost
+   98  ssh -o PreferredAuthentications=password  ryouta@localhost
+   99  ansible-playbook -i /etc/ansible/hosts 01_testbook.yml -u ryouta -k -vvvv
+  100  vim 01_testbook.yml 
+  101  ansible-playbook -i /etc/ansible/hosts 01_testbook.yml -u ryouta -k 
+  102  ansible-playbook -i /etc/ansible/hosts 01_testbook.yml -u ryouta -k -v
+  103  ansible-playbook -i /etc/ansible/hosts 01_testbook.yml -u ryouta -k -vvvv
+  104  vim 01_testbook.
+  105  vim 01_testbook.yml 
+  106  ansible-playbook -i /etc/ansible/hosts 01_testbook.yml -u ryouta -k -vvvv
+  107  sudo vim /etc/localhost
+  108  sudo vim /etc/ansible/hosts
+  109  ansible-playbook -i /etc/ansible/hosts 01_testbook.yml -u ryouta -k -vvvv
+  110  ansible-playbook -i /etc/ansible/hosts 01_testbook.yml -u ryouta -k -vv
+  111  vim ~/.ssh/known_hosts 
+  112  ansible-playbook -i /etc/ansible/hosts 01_testbook.yml -u ryouta -k -vv
+  113  ssh ryouta@127.0.0.1
+  114  ansible-playbook -i /etc/ansible/hosts 01_testbook.yml -u ryouta -k -vv
+  115  ansible-playbook -i /etc/ansible/hosts 01_testbook.yml -u ryouta -k -vvvv
+  116  vim ~/.ssh/known_hosts 
+  117  vim 01_testbook.yml 
+  118  ansible-playbook -i /etc/ansible/hosts 01_testbook.yml -u ryouta -k -vvvv
+  119  vim 01_testbook.yml 
+  120  cat /etc/ansible/hosts 
+  121  vim 01_testbook.yml 
+  122  ansible-playbook -i /etc/ansible/hosts 01_testbook.yml -u ryouta -k -vvvv
+  123  ansible-playbook -i /etc/ansible/hosts 01_testbook.yml -u ryouta -k -K -vvvv 
+  124  ssh trashMG@take-tra-sh2
+  125  ssh trashMG@take-tra-sh2 -i ~/.ssh/id_rsa
+  126  ssh trashMG@take-tra-sh2
+  127  ssh ryouta@take-tra-sh2
+  128  ls
+  129  vim 01_testbook.yml 
+  130  ansible-playbook -i /etc/ansible/hosts 01_testbook.yml -u ryouta -k -K -vvvv 
+  131  ssh ryouta@take-tra-sh2
+  132  ssh trashMG@take-tra-sh2
+  133  ls
+  134  mv 01_testbook.yml 01_setup_rsa_login.yml
+  135  vim 01_setup_rsa_login.yml 
+  136  ansible-playbook -i /etc/ansible/hosts 01_testbook.yml -u ryouta -k -K
+  137  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  138  ls
+  139  rm -rf 02_copy_a_file_to_remote.yml 
+  140  rm -rf 01_testbook.retry 
+  141  ls
+  142  cp 01_setup_rsa_login.yml 02_deploy_web_server.yml
+  143  vim 02_deploy_web_server.yml 
+  144  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -k -K
+  145  ansible-playbook
+  146  ansible-playbook  
+  147  ls
+  148  cd ~/
+  149  cd -
+  150  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K --private-key=~/.ssh/id_rsa
+  151  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG  --private-key=~/.ssh/id_rsa
+  152  ls
+  153  vim ~/.vimrc
+  154  vim
+  155  vim 01_setup_rsa_login.yml 
+  156  history | grep ansible-
+  157  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K 
+  158  ssh trashMG@take-tra-sh3
+  159  vim 01_setup_rsa_login.yml 
+  160  python -c 'import crypt; print crypt.crypt("$Killinsunoldmind0", "$1$25$")'
+  161  vim 01_setup_rsa_login.yml 
+  162  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K 
+  163  ssh trashMG@take-tra-sh2
+  164  ls
+  165  vim 02_deploy_web_server.yml
+  166  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K 
+  167  ping take-tra-sh
+  168  ping take-tra-sh2
+  169  vim 02_deploy_web_server.yml
+  170  ls
+  171  mkdir web_doc
+  172  vim web_doc/index.php
+  173  vim 01_setup_rsa_login.yml 
+  174  vim 02_deploy_web_server.
+  175  vim 02_deploy_web_server.yml 
+  176  vim 02_deploy_web_server.
+  177  vim 01_setup_rsa_login.yml 
+  178  vim 02_deploy_web_server.yml 
+  179  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K 
+  180  vim 02_deploy_web_server.yml 
+  181  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K 
+  182  ls
+  183  vim 02_deploy_web_server.
+  184  vim 02_deploy_web_server.yml 
+  185  vim web_doc/index.php 
+  186  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K 
+  187  ls
+  188  vim 02_deploy_web_server.
+  189  vim 02_deploy_web_server.yml 
+  190  cp 02_deploy_web_server.yml 03_deploy_db_server.yml
+  191  vim 03_deploy_db_server.yml 
+  192  vim my.cnf.j2
+  193  vim 03_deploy_db_server.yml 
+  194  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K 
+  195  vim 03_deploy_db_server.yml 
+  196  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K 
+  197  vim 03_deploy_db_server.yml 
+  198  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K 
+  199  oldmind0
+  200  vim 03_deploy_db_server.yml 
+  201  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K 
+  202  vim 03_deploy_db_server.yml 
+  203  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K 
+  204  vim 03_deploy_db_server.yml 
+  205  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K 
+  206  vim 03_deploy_db_server.yml 
+  207  ls
+  208  vim 03_deploy_db_server.yml 
+  209  mv my.cnf.j2 my.cnf
+  210  vim 03_deploy_db_server.yml 
+  211  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K 
+  212  vim 03_deploy_db_server.yml 
+  213  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K 
+  214  cat my.cnf
+  215  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K 
+  216  ls
+  217  vim 03_deploy_db_server.yml 
+  218  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K 
+  219  vim 03_deploy_db_server.yml 
+  220  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K 
+  221  vim 03_deploy_db_server.yml 
+  222  vim 02_deploy_web_server.
+  223  vim 02_deploy_web_server.yml 
+  224  vim 03_deploy_db_server.yml 
+  225  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K 
+  226  ls
+  227  vim 03_deploy_db_server.yml 
+  228  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K 
+  229  vim 03_deploy_db_server.yml 
+  230  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K 
+  231  ls
+  232  vim /etc/my.cnf
+  233  sudo vim /etc/my.cnf
+  234  sudo cp /etc/my.cnf ./my.cnf_all
+  235  ls
+  236  vim 03_deploy_db_server.
+  237  mv db_files
+  238  mkdir db_files
+  239  mv my.cnf db_files/
+  240  mv my.cnf_all db_files/
+  241  ls
+  242  vim 03_deploy_db_server.
+  243  vim 03_deploy_db_server.yml 
+  244  ls -l /etc/my.cnf
+  245  vim 03_deploy_db_server.yml 
+  246  ls ~/
+  247  vim 02_deploy_web_server.yml
+  248  mv ~/eccube-3.0.14.zip web_doc/
+  249  vim 02_deploy_web_server.yml
+  250  ls
+  251  history |grep ansible-playbook
+  252  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  253  ls
+  254  cd web_doc/
+  255  ls
+  256  vim 02_deploy_web_server.yml
+  257  cd ..
+  258  vim 02_deploy_web_server.yml
+  259  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  260  vim 02_deploy_web_server.yml
+  261  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  262  vim 02_deploy_web_server.yml
+  263  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  264  vim 02_deploy_web_server.yml
+  265  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  266  vim 02_deploy_web_server.yml
+  267  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  268  vim 02_deploy_web_server.yml
+  269  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  270  vim 02_deploy_web_server.yml
+  271  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  272  vim 02_deploy_web_server.yml
+  273  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  274  vim 02_deploy_web_server.yml
+  275  vim web_doc/htaccess
+  276  vim 02_deploy_web_server.yml
+  277  mv ~/php.ini ./web_doc/
+  278  vim web_doc/php.ini 
+  279  vim 02_deploy_web_server.yml
+  280  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  281  vim 02_deploy_web_server.yml
+  282  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  283  sudo yum -y install mariadb
+  284  mysql root@take-tra-sh3 -p
+  285  ls
+  286  cat 03_deploy_db_server.
+  287  cat 03_deploy_db_server.yml 
+  288  mysql root@take-tra-sh3 -p
+  289  vim 03_deploy_db_server.
+  290  vim 03_deploy_db_server.yml 
+  291  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K
+  292  vim 03_deploy_db_server.yml 
+  293  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K
+  294  mysql -u eccubeAdmin -p
+  295  mysql -u eccubeAdmin@take-tra-sh3 -p
+  296  mysql -h take-tra-sh3 -u eccubeAdmin -p
+  297  vim 03_deploy_db_server.yml 
+  298  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K
+  299  mysql -h take-tra-sh3 -u eccubeAdmin -p
+  300  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K
+  301  vim 03_deploy_db_server.yml 
+  302  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K
+  303  mysql -h take-tra-sh3 -u eccubeAdmin -p
+  304  vim 03_deploy_db_server.yml 
+  305  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K
+  306  ls
+  307  mysql -h take-tra-sh3 -u eccubeAdmin -p
+  308  ls
+  309  vim web_doc/htaccess 
+  310  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  311  vim 02_deploy_web_server.yml 
+  312  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  313  vim 02_deploy_web_server.yml 
+  314  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  315  pwd
+  316  sudo vim /etc/ansible/hosts 
+  317  history | grep ansible-playbook
+  318  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  319  ssh take-tra-sh4
+  320  ssh take-tra-sh5
+  321  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  322  vim 01_setup_rsa_login.
+  323  vim 01_setup_rsa_login.yml 
+  324  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  325  vim 01_setup_rsa_login.yml 
+  326  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  327  vim 01_setup_rsa_login.yml 
+  328  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  329  vim 01_setup_rsa_login.yml 
+  330  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  331  history | grep ansible-playbook
+  332  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  333  history | grep ansible-playbook
+  334  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K
+  335  vim 03_deploy_db_server.yml 
+  336  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K
+  337  vim 03_deploy_db_server.yml 
+  338  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K -vvvv
+  339  vim 03_deploy_db_server.yml 
+  340  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K -vvvv
+  341  vim 03_deploy_db_server.yml 
+  342  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K -v
+  343  ping take-tra-sh4
+  344  vim 02_deploy_web_server.yml 
+  345  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  346  vim 02_deploy_web_server.yml 
+  347  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  348  vim 02_deploy_web_server.yml 
+  349  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  350  vim 02_deploy_web_server.yml 
+  351  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  352  vim 03_deploy_db_server.yml 
+  353  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K
+  354  ls
+  355  cd web_doc/
+  356  ls
+  357  cd ..
+  358  ls
+  359  vim 02_deploy_web_server.yml 
+  360  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -Kansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  361  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  362  vim web_doc/httpd.conf 
+  363  vim 02_deploy_web_server.yml 
+  364  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  365  sudo vim /etc/ansible/hosts
+  366  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  367  ssh take-tra-sh7
+  368  ssh take-tra-sh6
+  369  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  370  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  371  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K
+  372  vim 03_deploy_db_server.yml 
+  373  mariadb -h take-tra-sh7 -u eccubeAdmin -p
+  374  mysql -h take-tra-sh7 -u eccubeAdmin -p
+  375  exit
+  376  ls
+  377  cd playbooks/
+  378  ls
+  379  rm -rf *.retry
+  380  ls
+  381  curl -sSL https://get.docker.com/ | sh
+  382  curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+  383  sudo curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+  384  sudo su -
+  385  ls
+  386  vim 01_setup_rsa_login.yml 
+  387  sudo vim /etc/ansible/hosts
+  388  vim 01_setup_rsa_login.yml 
+  389  http://repo.zabbix.com/zabbix/3.2/rhel/7/x86_64/zabbix-agent-3.2.6-1.el7.x86_64.rpm
+  390  sudo vim ~/.ssh/known_hosts 
+  391  ssh take-trash2
+  392  ssh take-tra-sh2
+  393  ssh take-tra-sh3
+  394  ls
+  395  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  396  vim 01_setup_rsa_login.yml 
+  397  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  398  vim 01_setup_rsa_login.yml 
+  399  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  400  vim 01_setup_rsa_login.yml 
+  401  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  402  vim 01_setup_rsa_login.yml 
+  403  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  404  ssh ryouta@take-tra-sh2
+  405  mv ~/zabbix_agentd.conf ./
+  406  ls
+  407  mkdir common_files
+  408  mv zabbix_agentd.conf common_files/
+  409  vim common_files/zabbix_agentd.conf 
+  410  vim 01_setup_rsa_login.yml 
+  411  vim 02_deploy_web_server.yml 
+  412  vim 01_setup_rsa_login.yml 
+  413  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  414  vim 01_setup_rsa_login.yml 
+  415  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  416  ls
+  417  cd common_files/
+  418  ls
+  419  cd ..
+  420  vim 01_setup_rsa_login.
+  421  vim 01_setup_rsa_login.y
+  422  vim 01_setup_rsa_login.yml 
+  423  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryo
+  424  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  425  vim 01_setup_rsa_login.yml 
+  426  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  427  ssh trashMG@take-tra-sh2
+  428  vim 01_setup_rsa_login.yml 
+  429  vim 02_deploy_web_server.yml 
+  430  vim 01_setup_rsa_login.
+  431  vim 01_setup_rsa_login.yml 
+  432  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  433  ssh trashMG@take-tra-sh2
+  434  sudo yum -y install nmap
+  435  nmap take-tra-sh2 
+  436  nmap take-tra-sh2  -p 10050-10051
+  437  nmap take-tra-sh3  -p 10050-10051
+  438  sudo vim /etc/ansible/hosts
+  439  ls
+  440  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  441  ssh take-tra-sh3
+  442  ssh take-tra-sh4
+  443  ssh take-tra-sh5
+  444  ssh take-tra-sh3
+  445  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  446  ls
+  447  vim common_files/zabbix_agentd.conf 
+  448  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  449  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K
+  450  ls
+  451  vim 01_setup_rsa_login.yml 
+  452  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  453  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  454  vim 01_setup_rsa_login.yml 
+  455  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K\\
+  456  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  457  vim 01_setup_rsa_login.yml 
+  458  vim common_files/addProfile.txt
+  459  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  460  vim common_files/addProfile.txt
+  461  vim 01_setup_rsa_login.
+  462  vim 01_setup_rsa_login.yml 
+  463  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  464  vim 01_setup_rsa_login.yml 
+  465  vim common_files/addProfile.txt 
+  466  sudo vim /etc/ansible/hosts
+  467  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  468  ssh take-tra-sh6
+  469  ssh take-tra-sh7
+  470  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  471  vim 01_setup_rsa_login.yml 
+  472  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  473  vim 01_setup_rsa_login.yml 
+  474  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  475  vim 01_setup_rsa_login.yml 
+  476  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  477  vim 01_setup_rsa_login.yml 
+  478  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  479  vim 01_setup_rsa_login.yml 
+  480  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  481  ping take-tra-sh6
+  482  vim common_files/addProfile.txt 
+  483  cat /etc/profile
+  484  cat /etc/profile >> common_files/addProfile.txt 
+  485  vim common_files/addProfile.txt 
+  486  ls
+  487  vim 01_setup_rsa_login.yml 
+  488  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  489  ssh ryouta@take-tra-sh6
+  490  vim 01_setup_rsa_login.yml 
+  491  vim common_files/addProfile.txt 
+  492  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  493  vim 01_setup_rsa_login.yml 
+  494  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  495  vim 01_setup_rsa_login.yml 
+  496  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  497  vim 01_setup_rsa_login.yml 
+  498  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  499  vim 01_setup_rsa_login.yml 
+  500  ansible-playbook -i /etc/ansible/hosts 01_setup_rsa_login.yml -u ryouta -k -K
+  501  vmstat h
+  502  free -h
+  503  vim web_doc/httpd.conf 
+  504  ansible-playbook -i /etc/ansible/hosts 02_deploy_web_server.yml -u trashMG -K
+  505  ab
+  506  sudo systemctl install httpd
+  507  sudo yum -y install httpd
+  508  ab -n 3000 -c 100 http://192.168.1.9
+  509  ab -n 3000 -c 100 http://take-trash06
+  510  ab -n 3000 -c 100 http://take-tra-sh6
+  511  ab -n 3000 -c 100 http://take-tra-sh6/
+  512  ab -n 3000 -c 1000 http://take-tra-sh6/
+  513  ab -n 3000 -c 500 http://take-tra-sh6/
+  514  ab -n 30000 -c 500 http://take-tra-sh6/
+  515  free
+  516  free -h
+  517  history
+  518  ab -n 30000 -c 500 http://take-tra-sh6/
+  519  ab -n 3000 -c 500 http://take-tra-sh6/
+  520  free -h
+  521  sudo yum -y remove httpd
+  522  wget http://apache.mirrors.pair.com/httpd/httpd-2.4.26.tar.gz
+  523  ls
+  524  tar zxvf httpd-2.4.26.tar.gz 
+  525  ls
+  526  cd httpd-2.4.26/
+  527  ls
+  528  ./configure
+  529  yum -y install APR
+  530  sudo yum -y install APR
+  531  sudo yum -y groupinstall "Development Tools"
+  532  sudo ./configure
+  533  cd
+  534  wget http://ftp.jaist.ac.jp/pub/apache//apr/apr-1.6.2.tar.gz
+  535  ls
+  536  tar zxvf apr-1.6.2.tar.gz 
+  537  cd apr-1.6.2/ls
+  538  cd apr-1.6.2/
+  539  ls
+  540  sudo ./configure
+  541  make
+  542  sudo make install
+  543  cd
+  544  wget http://ftp.jaist.ac.jp/pub/apache//apr/apr-util-1.6.0.tar.gz
+  545  tar zxvf apr-util-1.6.0.tar.gz 
+  546  cd apr-util-1.6.0/
+  547  ls
+  548  sudo ./configure
+  549  apr
+  550  cd ..
+  551  ls
+  552  cd apr-1.6.2/
+  553  ls
+  554  sudo ./configure
+  555  sudo make && sudo make
+  556  sudo make && sudo make install
+  557  sudo make 
+  558  sudo make clean
+  559  sudo make 
+  560  sudo make install
+  561  /usr/local/apr/bin/apr-1-config 
+  562  cd ..
+  563  ls
+  564  cd httpd-2.4.26/
+  565  ls
+  566  sudo ./configure
+  567  cd ..
+  568  cd apr-util-1.6.0/
+  569  ls
+  570  ./configure --help
+  571  pwd
+  572  history
+  573  ./configure --with-apr=/usr/local/apr/bin/apr-1-config
+  574  sudo ./configure --with-apr=/usr/local/apr/bin/apr-1-config
+  575  sudo make && sudo make install
+  576  sudo make install
+  577  sudo make clean
+  578  sudo make
+  579  cd ..
+  580  sudo yum -y search httpd
+  581  yum info httpd
+  582  ls
+  583  yum info httpd --
+  584  yum info httpd --latest
+  585  sudo yum -y install httpd
+  586  ab
+  587  ab -n 5000 -c 100 http://take-tra-sh6/
+  588  free
+  589  free -h
+  590  ab -n 5000 -c 1000 http://take-tra-sh6/
+  591  ab -n 5000 -c 50 http://take-tra-sh6/
+  592  ab -n 5000 -c 80 http://take-tra-sh6/
+  593  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K
+  594  ls
+  595  cd playbooks/
+  596  ls
+  597  ansible-playbook -i /etc/ansible/hosts 03_deploy_db_server.yml -u trashMG -K
+  598  ab -n 5000 -c 80 http://take-tra-sh6/
+  599  systemctl httpd stop
+  600  systemctl stop httpd
+  601  sudo systemctl stop httpd
+  602  ls
+  603  vim 02_deploy_web_server.yml 
+  604  yum info httpd
+  605  ls
+  606  cd playbooks/
+  607  ls
+  608  vim 01_setup_rsa_login.yml 
+  609  ls
+  610  touch production
+  611  touch statging
+  612  mkdir group_vars
+  613  mkdir host_vars
+  614  mkdir library
+  615  touch site.yml
+  616  mkdir roles
+  617  mkdir roles/common
+  618  mkdir roles/common/tasks
+  619  mkdir roles/common/templates
+  620  mkdir roles/common/files
+  621  mkdir roles/common/vars
+  622  ls
+  623  cp roles/common/ roles/web
+  624  cp -R roles/common/ roles/web
+  625  cp -R roles/common/ roles/db
+  626  cp -R roles/common/ roles/unnei
+  627  ls
+  628  mv 01_setup_rsa_login.yml roles/common/tasks/
+  629  ll
+  630  mv 02_deploy_web_server.yml roles/web/tasks/
+  631  mv 03_deploy_db_server.yml roles/web/tasks/
+  632  ll
+  633  rm -rf 01_setup_rsa_login.retry 
+  634  rm -rf 03_deploy_db_server.retry 
+  635  ll
+  636  mv web_doc/* roles/web/files/
+  637  mv db_files/* roles/db/files/
+  638  ls
+  639  rm -rf web_doc/
+  640  ls
+  641  rm -rf db_files/
+  642  ls
+  643  mv common_files/* roles/common/files/
+  644  ls
+  645  rm -rf common_files/
+  646  ls
+  647  cd roles/
+  648  ls
+  649  cd common/
+  650  ls
+  651  vim tasks/01_setup_rsa_login.yml 
+  652  cp ~/.ssh/id_rsa.pub files/trashMG_pub
+  653  vim tasks/01_setup_rsa_login.yml 
+  654  ssh-keygen
+  655  ls
+  656  ls files/
+  657  vim tasks/01_setup_rsa_login.yml 
+  658  yum -y info vim
+  659  yum -y info vi
+  660  sudo yum info vim
+  661  git
+  662  cd
+  663  git clone https://github.com/vim/vim.git
+  664  yum -y remove vim
+  665  sudo yum -y remove vim
+  666  ls
+  667  cd vim
+  668  ls
+  669  sudo ./configure
+  670  sudo yum -y instal ncurses
+  671  sudo yum -y install ncurses
+  672  sudo yum -y install lua-devel perl-extutils-embed
+  673  sudo ./configure
+  674  cd
+  675  vim
+  676  vi
+  677  yum -y install vim
+  678  sudo yum -y install vim
+  679  ls
+  680  vim install_vim_80.sh
+  681  chmod a+x install_vim_80.sh 
+  682  . install_vim_80.sh 
+  683  vim
+  684  sudo yum -y remove vim
+  685  vim
+  686  ls
+  687  ./install_vim_80.sh 
+  688  vim
+  689  mv .vimrc .vimrc_old
+  690  ./install_vim_80.sh 
+  691  ls -la
+  692  cd .vim
+  693  ls
+  694  cd ..
+  695  ls
+  696  vim install_vim_80.sh 
+  697  nano install_vim_80.sh 
+  698  /usr/local/bin/vim
+  699  mv .vimrc_old .vimrc
+  700  ls -la
+  701  /usr/local/bin/vim
+  702  rm -rf vim
+  703  rm -rf .vimrc
+  704  ls
+  705  ls -la
+  706  rm -rf vimrc/
+  707  vim
+  708  /usr/local/bin/vim
+  709  ln -s /usr/local/bin/vim /bin/vim
+  710  sudo ln -s /usr/local/bin/vim /bin/vim
+  711  vim
+  712  vim .vimrc
+  713  vim
+  714  ls
+  715  cd playbooks/
+  716  ls
+  717  cd roles/
+  718  ls
+  719  cd common/
+  720  ls
+  721  vim tasks/01_setup_rsa_login.yml 
+  722  vim ~/.vimrc
+  723  ls
+  724  vim tasks/01_setup_rsa_login.yml 
+  725  ansible-playbook -i /etc/ansible/hosts tasks/01_setup_rsa_login.yml -u ryouta -k -K
+  726  vim tasks/01_setup_rsa_login.yml 
+  727  ls
+  728  cd playbooks/
+  729  ls
+  730  git
+  731  sudo su -
+  732  ls
+  733  git init
+  734  git add .
+  735  git commit -m "initial commit"
+  736  git config --global user.email "noneck.0311@gmail.com"
+  737  git config --global user.name "killinsun"
+  738  git remote add origin https://github.com/killinsun/ctcs-tra-sh.git
+  739  git push origin master
+  740  git remote add origin https://github.com/killinsun/ctcs-tra-sh.git
+  741  git push
+  742  git add .
+  743  git commit -m "initial commit"
+  744  git push
+  745  git push origin master
+  746  ld
+  747  ls
+  748  exit
+  749  sudo su -
+  750  ls
+  751  cd playbooks/
+  752  ls
+  753  history
+  754  vim history.txt
+  755  ls
+  756  git add .
+  757  git commit -m "memo add"
+  758  git push
+  759* exit 
+  760  history
+  761  history > take-hist.txt
