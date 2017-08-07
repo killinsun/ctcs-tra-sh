@@ -1,6 +1,7 @@
 - hosts: webservers,dbservers
   become: yes
   vars:
+  - playbook_path: /root/ctcs-tra-sh/roles/common/
   - MG_username: trashMG
   - MG_homedir:  /home/{{username}}
   - MG_password: $1$25$/EqOfcxYyGor02JYZWZwG0
@@ -25,7 +26,7 @@
       mode: 755
 
   - name: Set script command.
-    shell: cat ../files/addProfile.txt > /etc/profile
+    shell: cat {{playbook_path}}/files/addProfile.txt > /etc/profile
 
   - name: add a new user
     user: name={{ item.name }} state={{ item.state }} group={{ item.group }} password={{ item.password }}
