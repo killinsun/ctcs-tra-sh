@@ -1,1 +1,0 @@
-ansible-playbook -i /etc/ansible/hosts tasks/01_setup_rsa_login.yml -u ryouta -k -K
