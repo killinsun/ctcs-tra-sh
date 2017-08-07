@@ -28,7 +28,7 @@
     shell: cat ../files/addProfile.txt > /etc/profile
 
   - name: add a new user
-    user: name={{ item.username }} state={{ item.state }} group={{ item.group } password={{ password }}
+    user: name={{ item.name }} state={{ item.state }} group={{ item.group }} password={{ item.password }}
     with_items: 
       - { "name":"{{MG_username}}", "state":"present", "group":"wheel", "password":"{{MG_password}}" }
       - { "name":"{{tech_username}}", "state":"present", "group":"wheel", "password":"{{tech_password}}" }
