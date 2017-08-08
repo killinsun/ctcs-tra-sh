@@ -1,8 +1,6 @@
 - hosts: webservers,dbservers
   become: yes
   vars:
-  - base_dir: "/usr/share/local/ctcs-tra-sh/"
-  - playbook_dir: "roles/web/"
   - MG_username: trashMG
   - MG_homedir:  /home/{{MG_username}}
   - MG_password: $1$25$/EqOfcxYyGor02JYZWZwG0
@@ -15,7 +13,7 @@
   tasks:
   - name: Put profile on remote
     copy: 
-      src: "{{ base_dir }}{{playbook_dir}}files/addProfile.txt"
+      src: "../files/addProfile.txt"
       dest: /home/ryouta/addProfile.txt
       owner: ryouta
       group: wheel
@@ -27,11 +25,7 @@
       mode: 755
 
   - name: Set script command.
-<<<<<<< HEAD
-    shell: "touch /etc/profile || cat {{ playbook_path }}files/addProfile.txt > /etc/profile"
-=======
-    shell: cat "{{{ base_dir }}{{playbook_dir}}files/addProfile.txt > /etc/profile"
->>>>>>> 26e3750b9414bf53ec824e150c81238e39d6f554
+    shell: "touch /etc/profile || cat ../files/addProfile.txt > /etc/profile"
 
   - name: add a new user
     user: name={{ item.name }} state={{ item.state }} group={{ item.group }} password={{ item.password }}
@@ -50,9 +44,9 @@
   - name: copy a public key file to remote
     copy: src={{ item.src }} dest={{ item.dest }} mode=600
     with_items:
-      - { "src":"{{{ base_dir }}{{playbook_dir}}files/trashMG.pub", "dest":"{{MG_homedir}}/.ssh/authorized_keys" }
-      - { "src":"{{{ base_dir }}{{playbook_dir}}files/tech-user.pub", "dest":"{{tech_homedir}}/.ssh/authorized_keys" }
-      - { "src":"{{{ base_dir }}{{playbook_dir}}files/operator.pub", "dest":"{{OP_homedir}}/.ssh/authorized_keys" }
+      - { "src":"../files/trashMG.pub", "dest":"{{MG_homedir}}/.ssh/authorized_keys" }
+      - { "src":"../files/tech-user.pub", "dest":"{{tech_homedir}}/.ssh/authorized_keys" }
+      - { "src":"../files/operator.pub", "dest":"{{OP_homedir}}/.ssh/authorized_keys" }
 
   - name: get zabbix agent rpm file.
     get_url:
@@ -64,7 +58,7 @@
 
   - name: put zabbix-agent.conf on remote
     copy: 
-      src: "{{ base_dir }}{{playbook_dir}}files/zabbix_agentd.conf"
+      src: "../files/zabbix_agentd.conf"
       dest: /etc/zabbix/zabbix_agentd.conf
       owner: zabbix
       group: zabbix

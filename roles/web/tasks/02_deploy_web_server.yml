@@ -2,8 +2,6 @@
   become: yes
   vars:
   - username: trashMG
-  - base_dir: /usr/share/local/ctcs-tra-sh/
-  - playbook_dir: web/
   tasks:
   - name: Install epel-release
     yum: name=epel-release state=latest
@@ -27,7 +25,7 @@
 
   - name: put EC-CUBE3 on remote
     unarchive: 
-      src: "{{base_dir}}{{playoobk_dir}}files/eccube-3.0.14.zip"
+      src: "../files/eccube-3.0.14.zip"
       dest: /home/trashMG/
 
   - name: deploy EC-CUBE3 for /var/www/html/
@@ -35,19 +33,19 @@
 
   - name: put .htaccess on /var/www
     copy:
-      src: "{{base_dir}}{{playoobk_dir}files/htaccess"
+      src: "../files/htaccess"
       dest: /var/www/.htaccess
       owner: apache
       group: apache
 
   - name: put php.ini on /etc/php.ini
     copy:
-      src: "{{base_dir}}{{playoobk_dir}files/php.ini"
+      src: "../files/php.ini"
       dest: /etc/php.ini
 
   - name: put httpd.conf on /etc/httpd/conf/httpd.conf
     copy:
-      src: "{{base_dir}}{{playoobk_dir}files/httpd.conf"
+      src: "../files/httpd.conf"
       dest: /etc/httpd/conf/httpd.conf
 
   - name: set permission for /var/ww/html

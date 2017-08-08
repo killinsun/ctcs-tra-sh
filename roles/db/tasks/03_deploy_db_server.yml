@@ -5,7 +5,6 @@
   - mysql_root_password: ctcs-tra-sh
   - eccube_db_password: ctcs-tra-sh
 
-
   tasks:
   - name: Install epel-release
     yum: name=epel-release state=latest
@@ -24,7 +23,7 @@
 
   - name: put my.cnf on remote(/etc/my.cnf)
     copy:
-      src: db_files/my.cnf_all
+      src: ../files/my.cnf_all
       dest: /etc/my.cnf
       mode: 0644
       owner: root
@@ -38,11 +37,12 @@
 
   - name: put my.cnf on remote
     copy:
-      src: db_files/my.cnf
+      src: ../files/my.cnf
       dest: /root/.my.cnf
       mode: 0600
       owner: root
       group: root
+
   - name: Create database eccube
     mysql_db:
       name: eccube
