@@ -1,9 +1,9 @@
 - hosts: webservers,dbservers
   become: yes
   vars:
-  - playbook_path: /root/ctcs-tra-sh/roles/common/
+  - playbook_path: "/root/ctcs-tra-sh/roles/common/"
   - MG_username: trashMG
-  - MG_homedir:  /home/{{username}}
+  - MG_homedir:  /home/{{MG_username}}
   - MG_password: $1$25$/EqOfcxYyGor02JYZWZwG0
   - tech_username: tech-user
   - tech_homedir: /home/{{tech_username}}
@@ -14,7 +14,7 @@
   tasks:
   - name: Put profile on remote
     copy: 
-      src: common_files/addProfile.txt
+      src: "{{ playbook_path }}files/addProfile.txt"
       dest: /home/ryouta/addProfile.txt
       owner: ryouta
       group: wheel
@@ -26,14 +26,14 @@
       mode: 755
 
   - name: Set script command.
-    shell: cat {{playbook_path}}/files/addProfile.txt > /etc/profile
+    shell: cat "{{ playbook_path }}files/addProfile.txt > /etc/profile"
 
   - name: add a new user
     user: name={{ item.name }} state={{ item.state }} group={{ item.group }} password={{ item.password }}
     with_items: 
       - { "name":"{{MG_username}}", "state":"present", "group":"wheel", "password":"{{MG_password}}" }
       - { "name":"{{tech_username}}", "state":"present", "group":"wheel", "password":"{{tech_password}}" }
-      - { "name":"{{OP_username}}", "state":"present", "group":"operator", "password":"{{OP_password}}" }
+      - { "name":"{{OP_username}}", "state":"present", "group":"users", "password":"{{OP_password}}" }
 
 
   - name: mkdir .ssh
@@ -46,14 +46,14 @@
   - name: add authorized keys
     file: dest={{ item.dest }}  state=touch owner={{ item.owner}}
     with_items:
-      - { "dest":"{{MG_homedir}}/.ssh/authorized_keys", "owner":"{MG_username}" }
+      - { "dest":"{{MG_homedir}}/.ssh/authorized_keys", "owner":"{{MG_username}}" }
 
   - name: copy a public key file to remote
     copy: src={{ item.src }} dest={{ item.dest }} mode=600
     with_items:
-      - { "src":"../files/trashMG_pub", "dest":"{{MG_homedir}}/.ssh/authorized_keys" }
-      - { "src":"../files/tech-user_pub", "dest":"{{tech_homedir}}/.ssh/authorized_keys" }
-      - { "src":"../files/operator_pub", "dest":"{{OP_homedir}}/.ssh/authorized_keys" }
+      - { "src":"{{playbook_path}}files/trashMG.pub", "dest":"{{MG_homedir}}/.ssh/authorized_keys" }
+      - { "src":"{{playbook_path}}files/tech-user.pub", "dest":"{{tech_homedir}}/.ssh/authorized_keys" }
+      - { "src":"{{playbook_path}}files/operator.pub", "dest":"{{OP_homedir}}/.ssh/authorized_keys" }
 
   - name: get zabbix agent rpm file.
     get_url:
@@ -65,7 +65,7 @@
 
   - name: put zabbix-agent.conf on remote
     copy: 
-      src: ../files/zabbix_agentd.conf 
+      src: "{{ playbook_path }}files/zabbix_agentd.conf"
       dest: /etc/zabbix/zabbix_agentd.conf
       owner: zabbix
       group: zabbix
