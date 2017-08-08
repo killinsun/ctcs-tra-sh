@@ -26,7 +26,7 @@
       mode: 755
 
   - name: Set script command.
-    shell: cat "{{ playbook_path }}files/addProfile.txt > /etc/profile"
+    shell: "touch /etc/profile || cat {{ playbook_path }}files/addProfile.txt > /etc/profile"
 
   - name: add a new user
     user: name={{ item.name }} state={{ item.state }} group={{ item.group }} password={{ item.password }}
@@ -35,18 +35,12 @@
       - { "name":"{{tech_username}}", "state":"present", "group":"wheel", "password":"{{tech_password}}" }
       - { "name":"{{OP_username}}", "state":"present", "group":"users", "password":"{{OP_password}}" }
 
-
   - name: mkdir .ssh
-    file: dest={{ item.dest }} state=directory owner={{ item.owner }}
+    file: dest="{{ item.dest }}/.ssh/" state=directory owner={{ item.owner }}
     with_items: 
       - { "dest":"{{MG_homedir}}", "owner":"{{MG_username}}" }
       - { "dest":"{{tech_homedir}}", "owner":"{{tech_username}}" }
       - { "dest":"{{OP_homedir}}", "owner":"{{OP_username}}" }
-
-  - name: add authorized keys
-    file: dest={{ item.dest }}  state=touch owner={{ item.owner}}
-    with_items:
-      - { "dest":"{{MG_homedir}}/.ssh/authorized_keys", "owner":"{{MG_username}}" }
 
   - name: copy a public key file to remote
     copy: src={{ item.src }} dest={{ item.dest }} mode=600
