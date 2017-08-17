@@ -10,7 +10,7 @@
     yum: name=httpd
 
   - name: Install PHP
-    yum: name=php,php-mysql,php-mbstring,php-xml
+    yum: name=php,php-mysql,php-mbstring,php-xml,unzip
 
   - name: Install Mcrypt
     yum:
