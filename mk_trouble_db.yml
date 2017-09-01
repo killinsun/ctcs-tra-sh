@@ -1,0 +1,6 @@
+---
+- hosts: dbservers
+  become: yes
+  roles:
+    - mk_trouble_db
+

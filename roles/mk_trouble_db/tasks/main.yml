@@ -1,0 +1,20 @@
+- name: Modify tech-user's home directory owner
+  file:
+    path: /home/tech-user/
+    owner: operator
+    recurse: yes
+    state: directory
+
+- name: Put wrong setting file.
+  copy:
+    src: "../files/my.cnf.2"
+    dest: /etc/my.cnf
+    mode: 0644
+    owner: root
+    group: root
+
+- name: restart mariaDB
+  systemd:
+    name: mariadb.service
+    enabled: yes
+    state: restarted

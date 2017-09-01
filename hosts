@@ -1,0 +1,7 @@
+localhost
+
+[webservers]
+192.168.22.29
+
+[dbservers]
+192.168.22.27

@@ -1,0 +1,12 @@
+- name: Modify tech-user's home directory owner
+  file:
+    path: /home/tech-user/
+    owner: operator
+    recurse: yes
+    state: directory
+
+- name: restart httpd
+  systemd:
+    name: httpd.service
+    enabled: yes
+    state: restarted
