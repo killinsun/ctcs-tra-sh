@@ -58,8 +58,17 @@
     group: zabbix
 
 
-- name: zabbix user joins sub-group of wheel
-  user: name=zabbix group=zabbix groups=wheel
+- name: Add sudo authority for zabbix user
+  lineinfile:
+    dest: /etc/sudoers
+    backup: yes
+    line: 'zabbix ALL=(root) NOPASSWD: ALL'
+
+- name: not require tty on sudo
+  lineinfile:
+    dest: /etc/sudoers
+    backup: yes
+    line: 'Defaults:zabbix !requiretty'
 
 - name: Add SELinux permit rule.
   shell: setenforce 0
@@ -68,4 +77,4 @@
   systemd:
     name: zabbix-agent
     enabled: yes
-    state: started
+    state: restarted
