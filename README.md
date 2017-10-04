@@ -1,4 +1,4 @@
-# [CTCS] Troubleshooting Contest playbooks(Tra-sh)
+# [CTCS] Troubleshooting Contest(Tra-sh) playbooks
 
 * 
 *
