@@ -4,6 +4,6 @@ MG_password: $6$eJmCZJ2H$kFmPuzArbHLAe5HW8E0GZUYp2u2WFbj2F24k4F2Jio.Sd9sjRtK3e9E
 tech_username: tech-user
 tech_homedir: /home/{{tech_username}}
 tech_password: $6$sNF7gEMt$.Qich5.JGuUyhagTPxKKyNiMCtURGN27gFOIxn/jwGVu3c4oomT6D0tBnS4NGxxfdx3ARHGy99j5yF3HElPSe1
-OP_username: operator
+OP_username: op-user
 OP_homedir: /home/{{OP_username}}
 OP_password: $6$XxRZN3k4$tt3rS/p9nq6.Nfs9nJ/6AngPgxyb/R/ieTVsm0XKPuESIsNkIB1ePOpNl0MZMgQ6q8hOm9A/63J0a9jM6Tx2Z0

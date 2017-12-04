@@ -45,5 +45,5 @@
     name: eccubeAdmin
     password: "{{ eccube_db_password }}"
     priv: "eccube.*:ALL"
-    host: 10.%.%.%
+    host: 192.168.22.%
     state: present
