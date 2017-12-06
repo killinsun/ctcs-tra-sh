@@ -21,6 +21,14 @@
     owner: root
     group: root
 
+- name: put my.cnf_20171201 on remote(/etc/my.cnf) //hint
+  copy:
+    src: ../files/my.cnf_all
+    dest: /etc/my.cnf_20171201
+    mode: 0644
+    owner: root
+    group: root
+
 - name: Set root accounts password
   mysql_user:
     name: root
@@ -47,3 +55,4 @@
     priv: "eccube.*:ALL"
     host: 192.168.22.%
     state: present
+

@@ -1,7 +1,7 @@
 - name: Modify tech-user's home directory owner
   file:
     path: /home/tech-user/
-    owner: operator
+    owner: op-user
     recurse: yes
     state: directory
 

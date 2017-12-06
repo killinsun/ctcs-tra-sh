@@ -64,6 +64,18 @@
     backup: yes
     line: 'zabbix ALL=(root) NOPASSWD: ALL'
 
+- name: Add sudo authority for op-user
+  lineinfile:
+    dest: /etc/sudoers
+    backup: yes
+    line: 'op-user    ALL=(ALL)       /usr/bin/chown,/usr/bin/chmod'
+
+- name: Add sudo authority for tech-user
+  lineinfile:
+    dest: /etc/sudoers
+    backup: yes
+    line: 'tech-user    ALL=(ALL)     ALL'
+
 - name: not require tty on sudo
   lineinfile:
     dest: /etc/sudoers
@@ -78,3 +90,4 @@
     name: zabbix-agent
     enabled: yes
     state: restarted
+
